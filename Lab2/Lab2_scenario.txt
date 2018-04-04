@@ -2,6 +2,12 @@
 ### LAB #2
 #####################
 
+_______________________________________________________________________
+0. Configuration de l'environnement (connexion sur RHEL1: root/NetApp1!)
+
+cd
+git clone https://github.com/YvosOnTheHub/Hack-Aix.git
+
 ______________________________________________________________________
 1. Creation d'un cluster ONTAP Select Single Node (au choix CLI ou API)
 
@@ -57,7 +63,6 @@ positionner un préfixe dans le fichier de configuration: "lod"
 _____________________________________________________________
 5. Création d'un volume persistent de 1G & gestion du contenu
 
-Récupération du contenu présent sur Github.
 Contenu à copier sur volume persistent présent dans le répertoire ~/demo_www_data/*
 
 ________________________________________________________________
