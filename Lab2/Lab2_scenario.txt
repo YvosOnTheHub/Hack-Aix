@@ -1,5 +1,5 @@
 #####################
-### LAB #3
+### LAB #2
 #####################
 
 ______________________________________________________________________
@@ -51,6 +51,8 @@ https://netapp-trident.readthedocs.io/en/stable-v18.01/
 
 ___________________________________________
 4. Configuration "Trident for Docker" 18.01
+
+positionner un préfixe dans le fichier de configuration: "lod"
 
 _____________________________________________________________
 5. Création d'un volume persistent de 1G & gestion du contenu
