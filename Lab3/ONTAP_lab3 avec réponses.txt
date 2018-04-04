@@ -44,6 +44,10 @@ mv openshift-origin-server-v3.7.1-ab0f056-linux-64bit openshift-v3.7.1-install
 mv openshift-v3.7.1-install/kube* /usr/local/bin/
 mv openshift-v3.7.1-install/o* /usr/local/bin/    
 
+NB: si vous déroulez ce scenario hors du LabOnDemand NetApp, voici l'adresse à utiliser:
+wget https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
+
+
 _______________________________
 6. Démarrage de OpenShift 3.7.1
 
@@ -60,6 +64,9 @@ tar -xf trident-installer-18.01.0.tar.gz
 cd trident-installer
 mv tridentctl /usr/local/bin/
 chmod +x /usr/local/bin/tridentctl  
+
+NB: si vous déroulez ce scenario hors du LabOnDemand NetApp, voici l'adresse à utiliser:
+wget https://github.com/NetApp/trident/releases/download/v18.01.0/trident-installer-18.01.0.tar.gz 
 
 _______________________________________________
 8. Configuration "Trident for Kubernetes" 18.01
