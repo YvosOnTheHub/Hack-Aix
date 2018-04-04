@@ -107,7 +107,7 @@ Positionner un préfixe dans le fichier de configuration: lod
 _______________________________________________________
 5. Création d'un volume persistent & gestion du contenu
 
-docker volume create -d ontapnas --name demo_www_data -o size=1g
+docker volume create -d netapp --name demo_www_data -o size=1g
 docker volume ls
 mount 192.168.0.131:/netappdvp_demo_www_data /mnt/demo_www_data
 cp ~/Hack-Aix/Lab2/Apache/*  /mnt/demo_www_data/
@@ -115,7 +115,7 @@ cp ~/Hack-Aix/Lab2/Apache/*  /mnt/demo_www_data/
 ________________________________________________________________
 6. Création d'un clone de volume persistent & gestion du contenu
 
-docker volume create -d ontapnas --name demo_www_data_clone -o from=demo_www_data
+docker volume create -d netapp --name demo_www_data_clone -o from=demo_www_data
 docker volume ls
 ssh -l vsadmin 192.168.0.131 vol clone show
 mkdir /mnt/demo_www_data_clone
