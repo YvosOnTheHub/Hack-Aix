@@ -4,6 +4,7 @@
 
 _______________________________
 1. Connection sur RHEL1 (putty)
+=> root/Netapp1!
 
 _________________________________
 2. Paramétrage de l'environnement
@@ -26,7 +27,7 @@ ________________________________________________________
 4. Finalisation de configuration du cluster ONTAP (cluster1/SVM1)
 
 créer un mot de passe & "délocker" l'utilisateur vsadmin de la svm1
-(cluster1 = 192.168.0.101)
+(cluster1 = 192.168.0.101, admin/Netapp1!)
 	
 _______________________________
 5. Installation OpenShift 3.7.1
@@ -63,15 +64,15 @@ ______________________________________
 ____________________________________________
 11. Test de création d'un PVC de test de 1Go
 
-cf file ontap_test_1G.yaml
+=> utiliser le fichier ontap_test_1G.yaml
 
 ____________________________________________
 12. Test de création d'un POD de test de 1Go
 
-cf file pod_test.yaml
+=> utiliser le fichier file pod_test.yaml
 
 _______________________________
 13. Création d'un pod Wordpress
 
-cf répertoire Wordpress
+=> utiliser le  répertoire Wordpress
 
