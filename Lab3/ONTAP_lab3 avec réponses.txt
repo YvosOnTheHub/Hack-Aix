@@ -4,6 +4,7 @@
 
 _______________________________
 1. Connection sur RHEL1 (putty)
+=> root/Netapp1!
 
 _________________________________
 2. Paramétrage de l'environnement
