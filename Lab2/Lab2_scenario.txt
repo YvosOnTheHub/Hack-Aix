@@ -1,8 +1,8 @@
 #####################
-### LAB #2
+### LAB #3
 #####################
 
-_______________________________________________________________________
+______________________________________________________________________
 1. Creation d'un cluster ONTAP Select Single Node (au choix CLI ou API)
 
 Informations à utiliser
@@ -31,14 +31,12 @@ ONTAP Deploy IP						192.168.0.109
 - configuration de cet ESX
 - creation d'un cluster
 
-
-_______________________
-1. Connection sur RHEL1
-
+=> pour se connecter à RHEL1: root/Netapp1!
+=> pour se connecter à DEPLOY: amdin/Netapp1!
 __________________________
 2. Configuration d'une SVM
 __________________________________________________________
-2.A Création d'une SVM sur le nouveau cluster ONTAP Select (la création prend 30 minutes)
+2.A Création d'une SVM sur le nouveau cluster ONTAP Select (attention, la création du cluster en étape1 prend 30 minutes)
 
 IP de dispo: 192.168.0.140
 Protocole à activer: NFS
@@ -57,6 +55,7 @@ ___________________________________________
 _____________________________________________________________
 5. Création d'un volume persistent de 1G & gestion du contenu
 
+Récupération du contenu présent sur Github.
 Contenu à copier sur volume persistent présent dans le répertoire ~/demo_www_data/*
 
 ________________________________________________________________
@@ -77,3 +76,4 @@ _____________________________________________________________________________
 
 ____________________________________________________________________
 9. Modification du contenu (parent & clone) & observation à nouveau
+
