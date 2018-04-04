@@ -22,7 +22,6 @@ cat > /etc/docker/daemon.json << EOF
     {
         "insecure-registries" : ["172.30.0.0/16"]
     }
-EOF
 systemctl restart docker 
 
 ________________________________________________________
@@ -97,7 +96,7 @@ oc get sc
 ____________________________________________
 11. Test de création d'un PVC de test de 1Go
 
-cf file test_1G.yaml
+=> utiliser le fichier test_1G.yaml
 
 oc login -u developer
 oc create -f ~/Hack-Aix/Lab3/Test/ontap_test_1G.yaml
@@ -107,7 +106,7 @@ oc describe pv myproject
 ____________________________________________
 12. Test de création d'un POD de test de 1Go
 
-cf file pod_test.yaml
+=> utiliser le fichier pod_test.yaml
 
 oc login -u developer
 oc create -f ~/Hack-Aix/Lab3/Test/pod_test.yaml 
@@ -121,11 +120,11 @@ oc exec -it pod-test-small -- mount
 _______________________________
 13. Création d'un pod Wordpress
 
-cf répertoire Wordpress
+=> utiliser le répertoire Wordpress
 
-oc create -f ~/wordpress/1-pvc-ontap-wordpress.yaml
-oc create -f ~/wordpress/2-pvc-ontap-mysql.yaml
-oc create -f ~/wordpress/3-svc-mysql.yaml
-oc create -f ~/wordpress/4-svc-lb-wp.yaml
-oc create -f ~/wordpress/5-pod-mysql.yaml
-oc create -f ~/wordpress/6-pod-wordpress.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/1-pvc-ontap-wordpress.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/2-pvc-ontap-mysql.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/3-svc-mysql.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/4-svc-lb-wp.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/5-pod-mysql.yaml
+oc create -f ~/Hack-Aix/Lab3/wordpress/6-pod-wordpress.yaml
