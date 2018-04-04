@@ -2,6 +2,12 @@
 ### LAB #2 - REPONSES
 #####################
 
+________________________________________________________________________
+0. Configuration de l'environnement (connexion sur RHEL1: root/NetApp1!)
+
+cd
+git clone https://github.com/YvosOnTheHub/Hack-Aix.git
+
 _______________________________________________________________________
 1. Creation d'un cluster ONTAP Select Single Node (au choix CLI ou API)
 
@@ -50,6 +56,7 @@ cluster show-all
 _____________________
 1.B Création d'un API (login sur RHEL1) ==> Patience
 => connexion à RHEL1 : root/Netapp1!
+=> se positionner dans le répertoire Swagger du Lab
 
 /// HOST Registration
 curl -ku admin:Netapp1! -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d @CURL-RegisterHost.json 'https://ontapselect.demo.netapp.com/api/v2/hosts/192.168.0.51'
@@ -99,9 +106,6 @@ Positionner un préfixe dans le fichier de configuration: lod
 
 _______________________________________________________
 5. Création d'un volume persistent & gestion du contenu
-
-cd
-git clone https://github.com/YvosOnTheHub/Hack-Aix.git
 
 docker volume create -d ontapnas --name demo_www_data -o size=1g
 docker volume ls
