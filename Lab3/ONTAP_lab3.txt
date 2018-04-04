@@ -41,6 +41,9 @@ mv openshift-v3.7.1-install/o* /usr/local/bin/    
 mkdir ~/oc.config 
 mkdir ~/openshift-startup
 
+NB: si vous déroulez ce scenario hors du LabOnDemand NetApp, voici l'adresse à utiliser:
+wget https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-server-v3.7.1-ab0f056-linux-64bit.tar.gz
+
 _______________________________
 6. Démarrage de OpenShift 3.7.1
 
