@@ -31,6 +31,9 @@ ONTAP Deploy IP						192.168.0.109
 - configuration de cet ESX
 - creation d'un cluster
 
+=> pour se connecter à RHEL1: root/Netapp1!
+=> pour se connecter à DEPLOY: amdin/Netapp1!
+
 ____________________
 1.A Création via CLI (login sur Deploy)
 
@@ -46,6 +49,7 @@ cluster show-all
 
 _____________________
 1.B Création d'un API (login sur RHEL1) ==> Patience
+=> connexion à RHEL1 : root/Netapp1!
 
 /// HOST Registration
 curl -ku admin:Netapp1! -X PUT --header 'Content-Type: application/json' --header 'Accept: application/json' -d @CURL-RegisterHost.json 'https://ontapselect.demo.netapp.com/api/v2/hosts/192.168.0.51'
@@ -64,9 +68,6 @@ curl -ku admin:Netapp1! -X GET --header 'Accept: application/json' -d @CURL-Clus
 
 
 
-______________________
-1. Connection sur RHEL1
-
 ____________________________________________
 2. Configuration d'une SVM (au choix A ou B)
 __________________________________________________________
@@ -78,6 +79,7 @@ Gérer l'utilisateur vsadmin
 ______________________________________________
 2.B Utilisation de la SVM svm1 sur le cluster1
 
+via le GUI:
 - Creation d'un mot de passe pour l'utlisateur vsadmin => Netapp1!
 - "Unlock" de l'utilisateur vsadmin
 - Lif à utiliser: 192.168.0.131
@@ -93,14 +95,18 @@ ___________________________________________
 
 le fichier config.json pour utiliser la svm1 existe déjà sur RHEL1
 il est adaptable pour utiliser le cluster2 si besoin
+Positionner un préfixe dans le fichier de configuration: lod
 
 _______________________________________________________
 5. Création d'un volume persistent & gestion du contenu
 
+cd
+git clone https://github.com/YvosOnTheHub/Hack-Aix.git
+
 docker volume create -d ontapnas --name demo_www_data -o size=1g
 docker volume ls
 mount 192.168.0.131:/netappdvp_demo_www_data /mnt/demo_www_data
-cp ~/demo_www_data/*  /mnt/demo_www_data/
+cp ~/Hack-Aix/Lab2/Apache/*  /mnt/demo_www_data/
 
 ________________________________________________________________
 6. Création d'un clone de volume persistent & gestion du contenu
@@ -109,7 +115,7 @@ docker volume create -d ontapnas --name demo_www_data_clone -o from=demo_www_dat
 docker volume ls
 ssh -l vsadmin 192.168.0.131 vol clone show
 mkdir /mnt/demo_www_data_clone
-mount 10.65.180.126:/ywe_demo_www_data_clone /mnt/demo_www_data_clone
+mount 10.65.180.126:/lod_demo_www_data_clone /mnt/demo_www_data_clone
 
 __________________________________
 7. Création de 3 containers Apache
