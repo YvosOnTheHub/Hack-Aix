@@ -3,7 +3,7 @@
 #####################
 
 ________________________
-1. Connection sur CentOS
+1. Connection sur CentOS (root/Netapp1!)
 
 _________________________________
 2. Paramétrage de l'environnement
@@ -22,7 +22,7 @@ yum install docker-ce-17.12.1.ce
 systemctl start docker 
 
 ____________________________________________________________________
-4. Finalisation de configuration du cluster Solidfire via powershell
+4. Finalisation de configuration du cluster Solidfire via powershell (ajout d'un noeud et de qques disques au cluster existant)
 
 docker run -it --rm netapp/solidfire-powershell:latest 
 	powershell
@@ -39,7 +39,7 @@ __________________________________________
 https://netapp-trident.readthedocs.io/en/stable-v18.01/
 
 ___________________________________________
-6. Configuration "Trident for Docker" 18.01
+6. Configuration "Trident for Docker" 18.01 (remplacer les XXXX par les bonnes valeurs)
 
 ____________________________________________________________________
 7. Création d'un volume persistent avec une politique de QoS définie
