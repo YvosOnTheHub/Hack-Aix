@@ -56,6 +56,9 @@ mv openshift-origin-server-v3.7.1-ab0f056-linux-64bit openshift-v3.7.1-install
 mv openshift-v3.7.1-install/kube* /usr/local/bin/
 mv openshift-v3.7.1-install/o* /usr/local/bin/    
 
+https://docs.openshift.org/latest/getting_started/administrators.html
+wget https://github.com/openshift/origin/archive/v3.9.0.tar.gz
+
 _______________________________
 6. Démarrage de OpenShift 3.7.1
 
