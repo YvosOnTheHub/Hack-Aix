@@ -109,6 +109,7 @@ _______________________________________________________
 
 docker volume create -d netapp --name demo_www_data -o size=1g
 docker volume ls
+mkdir /mnt/demo_www_data
 mount 192.168.0.131:/netappdvp_demo_www_data /mnt/demo_www_data
 cp ~/Hack-Aix/Lab2/Apache/*  /mnt/demo_www_data/
 
